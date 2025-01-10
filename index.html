@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <body>
+        <center>
+           
+            <img id="img" src="images.jpeg" alt="" width="720" height="480">        
+            <b><h2>Guess The Number & Win the Game!</h2></b>
+            <p>Guess the number between 1 to 20</p>
+            <p id="cnt"></p>
+            <input type="number" id="guessInput" min="1" max="10">
+            <button id="btn">Check</button>
+            <p id="msg"></p>
+            <script src="index.js"></script>
+        </center>
+    </body>
+
+    <style>
+        
+        @keyframes blinkBackground {
+            
+            0% {
+                background-color: #0a0a0a;
+            }
+            50% {
+                background-color: #8d500bd3;
+            }
+
+            100% {
+                background-color: #0a0a0a;
+            }
+        }
+    
+        body {
+            background-color: #0a0a0a; 
+            animation: fadeIn 1s ease-in-out, blinkBackground 2s infinite; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+        }
+    
+        #guessInput {
+            padding: 10px 60px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        #btn {
+            padding: 10px 70px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #130c90;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        #btn:hover {
+            background-color: rgb(2, 122, 2);
+        }
+        
+        #img {
+            justify-content: center;
+            margin-top: 5px;
+            transition: transform 0.5s ease;
+            display: flex;
+        }
+        
+        #msg {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        </style>
+    </head>
+    
